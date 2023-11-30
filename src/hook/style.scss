@@ -1,0 +1,28 @@
+:root {
+  --main-bg-color: white;
+  --main-text-color: black;
+  --main-cardbg-color: white;
+  --main-cardtext-color: rgb(0, 0, 0);
+  --main-btntext-color: black;
+  --main-btnbg-color: white;
+}
+
+.dark {
+  --main-bg-color: rgb(0, 0, 0);
+  --main-text-color: white;
+  --main-btntext-color: white;
+  --main-btnbg-color: black;
+}
+
+body {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  .card {
+    background-color: var(--main-cardbg-color);
+    color: var(--main-cardtext-color);
+    .add {
+      background-color: var(--main-btnbg-color);
+      color: var(--main-btntext-color);
+    }
+  }
+}

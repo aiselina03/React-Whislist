@@ -1,3 +1,6 @@
+button{
+  cursor: pointer;
+}
 .cards {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -10,6 +13,11 @@
     border-radius: 6px;
     padding: 0 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .add {
+      margin-bottom: 10px;
+      padding: 5px 10px;
+ 
+    }
     img {
       width: 200px;
       height: 200px;
@@ -23,7 +31,6 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      cursor: pointer;
       color: black;
 
       .fa-heart,

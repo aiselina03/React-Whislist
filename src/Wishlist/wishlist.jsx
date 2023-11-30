@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import useDarkMode from "../hook/dark";
 import "./style.scss";
 
 function Wishlist() {
+  const { handleTheme } = useDarkMode();
   const [data, setData] = useState([]);
   const [wishlist, setWishlist] = useState(
     localStorage.getItem("wishlist")
@@ -36,7 +38,9 @@ function Wishlist() {
   return (
     <div className="home">
       <h2>Wishlist</h2>
-
+      <button onClick={() => handleTheme()}>
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
       <div className="cards">
         {wishlist.map((item) => (
           <div className="card" key={item.id}>
@@ -49,7 +53,7 @@ function Wishlist() {
               <span>$</span>
               {item.price}
             </p>
-            <button>Add basket</button>
+            <button className="add">Add basket</button>
           </div>
         ))}
       </div>
@@ -72,7 +76,7 @@ function Wishlist() {
               <span>$</span>
               {item.price}
             </p>
-            <button>Add basket</button>
+            <button className="add">Add basket</button>
           </div>
         ))}
       </div>
